@@ -49,7 +49,7 @@ header {
 }
 
 .signup {
-  background-color: rgb(225, 133, 197);
+  background-color: rgb(194, 123, 123);
   border-radius: 25px;
 }
 
@@ -84,5 +84,5 @@ h2 {
   font-style: normal;
   padding-left: 40px;
   margin-top: 40px;
-  color: rgb(225, 133, 197);
+  color:  rgb(194, 123, 123);
 }
