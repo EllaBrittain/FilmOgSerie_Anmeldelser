@@ -17,7 +17,6 @@ h2 {
 
 img {
     width: 100%;
-    height: 100%;
     display: block;
 }
 
@@ -48,6 +47,7 @@ main .flex {
     border-radius: 20px;
     top: 0;
     position: sticky;
+    align-self: flex-start;
 }
 
 .filmForside>img {
@@ -60,20 +60,37 @@ main .flex {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
     padding-top: 20px;
 }
 
-h2 {
-    font-size: 45px;
+.overskrift {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
 }
+
+.gjennomsnitt-vurdering {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gjennomsnitt-vurdering p {
+    color: white;
+    font-size: 22px;
+}
+
 
 .info {
     margin-top: 20px;
     max-width: 700px;
     padding: 10px;
-    line-height: 1.3;
-    border: solid rgb(194, 123, 123) 4px;
+    line-height: 1.2;
+    border: solid rgb(194, 123, 123) 7px;
+    background-color: rgb(139, 125, 125);
 }
 
 .anmeldeser-boks {
@@ -82,12 +99,36 @@ h2 {
     background-color: rgb(139, 125, 125);
     gap: 20px;
     display: flex;
+    max-height: 440px;
     flex-direction: column;
+    overflow-y: auto;
 }
 
 .anmeldeser-boks>h2 {
     font-size: 30px;
     padding-left: 20px;
+}
+
+.seMer {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.seMer>p {
+    color: white;
+    font-size: 18px;
+}
+
+#seAlle {
+    color: rgba(255, 255, 255, 0.681);
+    transition: 0.3s;
+}
+
+#seAlle:hover {
+    color: white;
 }
 
 .top {
@@ -114,6 +155,10 @@ h2 {
     border: white dotted 5px;
     border-radius: 15px;
     padding: 10px;
+}
+
+.andmeldese>p {
+    line-height: 1.4;
 }
 
 .skriv {
@@ -174,10 +219,80 @@ a>button {
 
 
 
+#modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
 
-@media(width < 1300px) {
-    .filmForside {
-        position: ;
-        top: auto;
-    }
+.modal-innhold {
+    background: rgb(139, 125, 125);
+    padding: 30px;
+    border-radius: 15px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: white dotted 4px;
+}
+
+.modal-innhold h2 {
+    font-size: 25px;
+}
+
+.modal-innhold input,
+.modal-innhold textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    font-family: sans-serif;
+    background: rgb(56, 55, 55);
+    color: white;
+}
+
+.modal-innhold textarea {
+    height: 120px;
+    resize: none;
+}
+
+.modal-innhold input::placeholder,
+.modal-innhold textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.modal-innhold .stjerner i {
+    cursor: pointer;
+    color: white;
+    transition: color 0.15s;
+}
+
+.knapper {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+
+
+
+
+.slett {
+    color: rgba(255, 255, 255, 0.681);
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 5px;
+    transition: 0.2s;
+    margin: 5px;
+}
+
+.slett:hover {
+    color: white;
 }
