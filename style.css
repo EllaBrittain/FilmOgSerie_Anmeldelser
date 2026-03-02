@@ -35,10 +35,12 @@ body {
 
 i {
   color: white;
-  font-size: 35px;
+  font-size: 40px;
 }
 
 header {
+  position: sticky;
+  top: 0;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -46,6 +48,7 @@ header {
   align-items: center;
   background-color: rgb(61, 59, 59);
   padding-right: 30px;
+  border-bottom: 1px solid black;
 }
 
 .signup {
@@ -56,7 +59,7 @@ header {
 section {
   min-height: 90vh;
   min-width: 90vw;
-  border: 10px solid white;
+  border: 5px solid white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,5 +87,18 @@ h2 {
   font-style: normal;
   padding-left: 40px;
   margin-top: 40px;
-  color:  rgb(194, 123, 123);
+  color: rgb(194, 123, 123);
+}
+
+h3 {
+  color: white;
+  font-size: 25px;
+  padding: 10px;
+  margin-bottom: -5px;
+  margin-left: 5px;
+}
+
+
+img{
+  height: 100px;
 }

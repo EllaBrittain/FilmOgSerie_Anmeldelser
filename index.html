@@ -13,10 +13,10 @@
 <body>
 
     <header>
-        
+
         <div class="icon">
-            <h3>Scenesnakk</h3>
             <i class="fa-regular fa-circle-play"></i>
+            <h3>Scenesnakk</h3>
         </div>
         <nav>
 
@@ -40,12 +40,24 @@
 
         <h1>Din Guide til Film og Serier</h1>
 
-        <h2>Oppdatert på det beste innen film og TV.</h2>
+        <h2>Oppdatert på det beste innen film og TV</h2>
 
 
     </section>
 
     <section id="serie">
+        <h1>Top serier</h1>
+
+        <div class="bilder">
+            <div><img src="bilder/breakingbad.png"></div>
+            <div><img src="bilder/gilmore.png"></div>
+            <div><img src="bilder/gossipgirl.jpg"></div>
+            <div><img src="bilder/prisonbreak.png"></div>
+            <div><img src="bilder/greys.png"></div>
+            <div><img src="bilder/vampire.png"></div>
+            <div><img src="bilder/TheOffice.png"></div>
+            <div><img src="bilder/prisonbreak.png"></div>
+        </div>
 
     </section>
 
@@ -58,6 +70,59 @@
 
 
     </footer>
+
+    <script>
+        let currentSlide = 0
+        const slides = document.querySelector(".scrollContainer")
+        const totalSlides = 13
+
+
+        const prevBtn = document.getElementById("prevBtn")
+        const nextBtn = document.getElementById("nextBtn")
+        const dotsContainer = document.getElementById("dots")
+
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement("span")
+            dot.className = "dot"
+            dot.onclick = () => goToSlide(i)
+            dotsContainer.appendChild(dot)
+        }
+
+
+        function updateSlide() {
+            slides.style.transform = `translateX(-${currentSlide * 650}px)`
+
+            const dots = document.querySelectorAll(".dot")
+            dots.forEach((dot, index) => {
+                dot.classList.toggle("active", index === currentSlide)
+            })
+
+            prevBtn.disabled = currentSlide === 0;
+            nextBtn.disabled = currentSlide === totalSlides - 1;
+        }
+
+
+        function skiftSlide(retning) {
+            currentSlide += retning
+
+            if (currentSlide < 0) {
+                currentSlide = 0
+            }
+            if (currentSlide >= totalSlides) {
+                currentSlide = totalSlides - 1
+            }
+
+            updateSlide()
+        }
+
+        function goToSlide(index) {
+            currentSlide = index
+            updateSlide()
+        }
+
+        updateSlide()
+
+        </script>
 
 
 
