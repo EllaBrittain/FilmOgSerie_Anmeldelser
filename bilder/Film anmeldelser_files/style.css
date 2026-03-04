@@ -113,48 +113,16 @@ img {
   display: flow-root; /* vis bare den med klassen "aktiv" */
 }
 
-footer {
-  text-align: center;
-  align-items: center;
-  width: 100%;
-  border-top: 1px solid black;
-  color: white;
-}
-
 .bunn {
   min-height: 300px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  justify-content: space-evenly;
+  width: 100%;
+  border-top: 1px solid black;
+  display: grid;
 }
 
-.litenboks {
-  max-width: 300px;
-  
-  
-}
-
-.storboks {
-  
-  max-width: 650px;
-  
-}
-
-footer H2 {
+.bunn H2{
   color: white;
   text-align: center;
   padding-left: 0px;
   font-size: 50px;
-}
-
-.bunn h3 {
-  color: rgb(194, 123, 123);
-}
-
-.bunn p {
-  font-size: 20px;
-  padding: 5px;
-  color: white;
 }
