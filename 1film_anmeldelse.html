@@ -14,12 +14,13 @@
 </head>
 
 <body>
-    <header>
-
+   <header>
         <div class="icon">
             <i class="fa-regular fa-circle-play"></i>
+            <h3>Scenesnakk</h3>
         </div>
         <nav>
+
             <div class="topnav">
                 <p>Home</p>
                 <p>Series</p>
@@ -216,7 +217,7 @@
             }
 
             const anmeldelse = { navn, tekst, rating }
-            const lagrede = JSON.parse(localStorage.getItem("anmeldelser") || "[]")
+            const lagrede = JSON.parse(localStorage.getItem("anmeldelser" + index) || "[]")
             lagrede.push(anmeldelse)
             localStorage.setItem("anmeldelser", JSON.stringify(lagrede))
 
