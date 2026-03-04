@@ -81,9 +81,8 @@ section {
   overflow: hidden;
 }
 
-#film{
+#film {
   overflow: hidden;
-  
 }
 
 .scrollContainer {
@@ -102,7 +101,6 @@ section {
   position: relative;
   left: 0px;
   margin-top: 50px;
-  
 }
 
 p {
@@ -184,4 +182,66 @@ footer H2 {
   font-size: 20px;
   padding: 5px;
   color: rgb(196, 194, 194);
+}
+
+@media (width < 450px) {
+  h1 {
+    font-size: 50px;
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    font-size: 30px;
+    padding-left: 20px;
+    margin-top: 20px;
+  }
+
+  header h3 {
+    display: none;
+  }
+
+  p {
+    padding: 5px;
+  }
+
+  .topnav {
+    font-size: 15px;
+    gap: 20px;
+    margin-top: 5px;
+    padding: 5px;
+  }
+
+  .icon {
+    padding-left: 15px;
+  }
+
+  i {
+    font-size: 20px;
+  }
+
+  header {
+    padding-right: 15px;
+  }
+
+  .signup {
+    background-color: rgb(194, 123, 123);
+    border-radius: 25px;
+  }
+
+  .bunn {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+  }
+
+  footer H2 {
+    font-size: 30px;
+  }
+
+  .bunn p {
+    font-size: 15px;
+    padding: 2px;
+    color: rgb(196, 194, 194);
+  }
 }

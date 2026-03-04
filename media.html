@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: lightblue;
+        }
+
+        p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        i {
+            font-size: 100px;
+            color: darkblue;
+
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 200px);
+            grid-auto-rows: 200px;
+            width: fit-content;
+            margin: auto;
+            gap: 50px;
+
+        }
+
+        .grid>div {
+            border: solid 2px black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            align-content: space-evenly;
+
+        }
+
+
+
+
+        @media (width < 500px) {
+
+            body {
+                background-color: lightpink;
+            }
+
+            .grid {
+                grid-template-columns: repeat(2, 100px);
+                grid-auto-rows: 100px;
+            }
+
+            .grid>div {
+                border: red dotted;
+                border-radius: 40px;
+            }
+
+            i {
+                font-size: 50px;
+                color: rgb(188, 67, 87);
+            }
+
+            p {
+                font-size: 15px;
+                margin-bottom: 15px;
+            }
+
+        }
+
+
+        @media (width < 350px) {
+            body {
+                background-color: lightgreen;
+            }
+
+            .grid {
+                grid-template-columns: repeat(1, 100px);
+                grid-auto-rows: 100px;
+
+            }
+
+            .grid>div {
+                border: rgb(38, 68, 15) dotted;
+                border-radius: 300px;
+            }
+
+
+            i {
+                color: rgb(5, 80, 5);
+            }
+
+            p {
+                font-size: 10px;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+
+
+
+</head>
+
+
+
+
+<body>
+
+
+    <h1>Media Queries</h1>
+
+    <div class="grid">
+
+        <div>
+            <p>Hjerte</p>
+
+            <i class="fa-solid fa-heart"></i>
+        </div>
+
+        <div>
+            <p>Kamera</p>
+
+            <i class="fa-solid fa-camera"></i>
+        </div>
+
+        <div>
+            <p>Smilefjes</p>
+            <i class="fa-solid fa-face-smile"></i>
+
+        </div>
+
+        <div>
+            <p>Stjerne</p>
+            <i class="fa-solid fa-star"></i>
+        </div>
+
+        <div>
+            <p>Bolt</p>
+            <i class="fa-solid fa-bolt"></i>
+
+        </div>
+
+        <div>
+            <p>Flammer</p>
+            <i class="fa-solid fa-fire"></i>
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
