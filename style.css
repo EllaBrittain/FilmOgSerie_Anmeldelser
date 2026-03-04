@@ -73,8 +73,17 @@ section {
   border: 5px solid white;
 }
 
+#main h1 {
+  margin-bottom: 50px;
+}
+
 #serie {
   overflow: hidden;
+}
+
+#film{
+  overflow: hidden;
+  
 }
 
 .scrollContainer {
@@ -82,7 +91,17 @@ section {
   display: flex;
   flex-direction: row;
   position: relative;
-  overflow: hidden;
+  left: 0px;
+  margin-top: 50px;
+}
+
+.scrollContainer2 {
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  left: 0px;
+  margin-top: 50px;
   
 }
 
@@ -96,7 +115,7 @@ h1 {
   font-family: "Fjalla One", sans-serif;
   font-weight: 400;
   font-style: normal;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
   margin-top: 30px;
 }
 
@@ -122,6 +141,7 @@ h3 {
 
 img {
   height: 300px;
+  padding: 10px;
 }
 
 footer {

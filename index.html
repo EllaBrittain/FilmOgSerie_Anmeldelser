@@ -35,7 +35,6 @@
 
 
 
-
     <section id="main">
 
         <h1>Din Guide til Film og Serier</h1>
@@ -57,6 +56,15 @@
             <div class="slide"><img src="bilder/vampire.png"></div>
             <div class="slide"><img src="bilder/TheOffice.png"></div>
             <div class="slide"><img src="bilder/prisonbreak.png"></div>
+
+            <div class="slide"><img src="bilder/breakingbad.png"></div>
+            <div class="slide"><img src="bilder/gilmore.png"></div>
+            <div class="slide"><img src="bilder/gossipgirl.jpg"></div>
+            <div class="slide"><img src="bilder/prisonbreak.png"></div>
+            <div class="slide"><img src="bilder/greys.png"></div>
+            <div class="slide"><img src="bilder/vampire.png"></div>
+            <div class="slide"><img src="bilder/TheOffice.png"></div>
+            <div class="slide"><img src="bilder/prisonbreak.png"></div>
         </div>
 
     </section>
@@ -64,6 +72,33 @@
     <section id="film">
 
         <h1>Top filmer</h1>
+
+        <div class="scrollContainer2">
+
+            <div class="slide2"><img src="bilder/joker.jpg"></div>
+            <div class="slide2"><img src="bilder/itonya.jpg"></div>
+            <div class="slide2"><img src="bilder/gatsby.jpg"></div>
+            <div class="slide2"><img src="bilder/Oppenheimer.jpg"></div>
+            <div class="slide2"><img src="bilder/blonde.jpg"></div>
+            <div class="slide2"><img src="bilder/hungergames.jpg"></div>
+            <div class="slide2"><img src="bilder/batman.jpg"></div>
+            <div class="slide2"><img src="bilder/matrix.jpg"></div>
+
+            <div class="slide2"><img src="bilder/joker.jpg"></div>
+            <div class="slide2"><img src="bilder/itonya.jpg"></div>
+            <div class="slide2"><img src="bilder/gatsby.jpg"></div>
+            <div class="slide2"><img src="bilder/Oppenheimer.jpg"></div>
+            <div class="slide2"><img src="bilder/blonde.jpg"></div>
+            <div class="slide2"><img src="bilder/hungergames.jpg"></div>
+            <div class="slide2"><img src="bilder/batman.jpg"></div>
+            <div class="slide2"><img src="bilder/matrix.jpg"></div>
+
+
+
+
+
+
+        </div>
 
     </section>
 
@@ -87,27 +122,51 @@
                 <p>Adresse: Thuneveien 3 Oslo </p>
             </div>
 
-           
-              
 
-            </div>
+
+
+        </div>
 
 
         </div>
     </footer>
 
 
-
-
-
-
-
-
-
     <script>
-        
+        const slides = document.querySelector(".scrollContainer");
+        let v = 0;
+
+        function scroll() {
+            v++;
+            if (v >= slides.scrollWidth / 2) {
+                v = 0;
+            }
+            slides.style.left = "-" + v + "px";
+        }
+
+        const slides2 = document.querySelector(".scrollContainer2")
+        let v2 = 0;
+
+        function scroll2() {
+            v2++
+            if (v2 >= slides2.scrolllWidth / 2) {
+                v2 = 0
+            }
+            slides2.style.left = "-" + v + "px";
+        }
 
 
+
+        setInterval(scroll, 16);
+        setInterval(scroll2, 16);
+
+
+
+        /* | slide1 | slide2 | slide3 |    <- original (1500px)
+            | slide1 | slide2 | slide3 |    <- kopi (1500px)
+                                   = 3000px totalt
+
+            slides.scrollWidth / 2 = 1500px  <- reset når vi er her */
 
 
 
@@ -120,5 +179,7 @@
 
 
 </body>
+
+
 
 </html>
