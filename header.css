@@ -31,6 +31,8 @@ i {
 }
 
 header {
+  position: fixed;
+  top: 0;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -41,6 +43,7 @@ header {
   top: 0;
   position: sticky;
   z-index: 3;
+  border-bottom: 1px solid black;
 }
 
 .signup {
