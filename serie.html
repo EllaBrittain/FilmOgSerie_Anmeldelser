@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serier</title>
 
-     <link rel="stylesheet" href="header.css">
-     <link rel="stylesheet" href="film_serie.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="header.css">
+
+    <link rel="stylesheet" href="film_serie.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
 <body>
 
-
     <header>
-
-        <header>
 
         <div class="icon">
             <i class="fa-regular fa-circle-play"></i>
@@ -25,31 +24,34 @@
         <nav>
 
             <div class="topnav">
-                <p>Home</p>
-                <p>Series</p>
-                <p>Films</p>
-                <p>About</p>
-                <p class="signup">Sign in</p>
+                <a href="index.html">Hjem</a>
+                <a href="serie.html">Serier</a>
+                <a href="film.html">Filmer</a>
+                <p>Om</p>
+                <p class="signup">Logg inn</p>
 
             </div>
         </nav>
     </header>
 
 
-    </header>
-
     <section>
 
         <h1>Serier</h1>
 
-        <p>TV-serier har blitt en av de mest populære formene for underholdning, og gir seerne mulighet til å følge karakterer og historier over lengre tid. I motsetning til filmer, som ofte forteller en avsluttet historie på et par timer, utvikler serier handlingen gjennom flere episoder og sesonger. Dette gir rom for dypere karakterutvikling, mer komplekse plott og større følelsesmessig engasjement. Enten det er drama, komedie, krim eller fantasy, finnes det serier for enhver smak – fra spennende thrillere til lette hverdagsfortellinger som samler familien foran skjermen.</p>
+        <p>TV-serier har blitt en av de mest populære formene for underholdning, og gir seerne mulighet til å følge
+            karakterer og historier over lengre tid. I motsetning til filmer, som ofte forteller en avsluttet historie
+            på et par timer, utvikler serier handlingen gjennom flere episoder og sesonger. Dette gir rom for dypere
+            karakterutvikling, mer komplekse plott og større følelsesmessig engasjement. Enten det er drama, komedie,
+            krim eller fantasy, finnes det serier for enhver smak – fra spennende thrillere til lette
+            hverdagsfortellinger som samler familien foran skjermen.</p>
 
 
         <div class="kontroller">
             <i class="fa-solid fa-list" id="knapp" onclick="byttVisning()"></i>
         </div>
 
-         <div class="grid" id="grid">
+        <div class="grid" id="grid">
             <div>
                 <a href="1serie_anmeldelse.html"><img src="bilder/Film anmeldelser_files/friends.jpg" alt=""></a>
             </div>
@@ -110,33 +112,33 @@
                 <p>Adresse: Thuneveien 3 Oslo </p>
             </div>
 
-           
-              
 
-            </div>
+
+
+        </div>
 
 
         </div>
     </footer>
 
-<body>
+    <body>
 
-    <script>
+        <script>
 
-    function byttVisning() {
-        const grid = document.getElementById("grid");
-        const knapp = document.getElementById("knapp");
+            function byttVisning() {
+                const grid = document.getElementById("grid");
+                const knapp = document.getElementById("knapp");
 
-        grid.classList.toggle("liste");
+                grid.classList.toggle("liste");
 
-  if (grid.classList.contains("liste")) {
-    knapp.className = "fa-solid fa-grip";
-  } else {
-    knapp.className = "fa-solid fa-list";
-  }
-}
+                if (grid.classList.contains("liste")) {
+                    knapp.className = "fa-solid fa-grip";
+                } else {
+                    knapp.className = "fa-solid fa-list";
+                }
+            }
 
 
-</script>
+        </script>
 
-    </html>
+</html>
