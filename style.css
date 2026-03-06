@@ -107,6 +107,24 @@ p {
   padding: 10px;
 }
 
+nav p {
+  transition: 0.2s;
+}
+nav p:hover {
+  transform: scale(1.1);
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  transition: 0.2s;
+}
+
+a:hover {
+  transform: scale(1.1);
+}
+
 h1 {
   color: white;
   font-size: 100px;
@@ -184,6 +202,39 @@ footer H2 {
   color: rgb(196, 194, 194);
 }
 
+@media (width < 750px) {
+  .topnav {
+    gap: 30px;
+    margin-top: 15px;
+    padding: 5px;
+  }
+
+  a {
+    padding: 5px;
+  }
+  p {
+    padding: 5px;
+  }
+
+  i {
+    font-size: 25px;
+  }
+
+  header h3 {
+    display: none;
+  }
+}
+
+@media (width < 650) {
+  header h3 {
+    display: none;
+  }
+
+  .signup {
+    padding: 2px;
+  }
+}
+
 @media (width < 450px) {
   h1 {
     font-size: 50px;
@@ -198,6 +249,10 @@ footer H2 {
 
   header h3 {
     display: none;
+  }
+
+  a {
+    padding: 5px;
   }
 
   p {
