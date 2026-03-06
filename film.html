@@ -7,6 +7,7 @@
     <title>Filmer</title>
 
     <link rel="stylesheet" href="header.css">
+
     <link rel="stylesheet" href="film_serie.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -17,27 +18,23 @@
 
     <header>
 
-        <header>
+        <div class="icon">
+            <i class="fa-regular fa-circle-play"></i>
+            <h3>Scenesnakk</h3>
+        </div>
+        <nav>
 
-            <div class="icon">
-                <i class="fa-regular fa-circle-play"></i>
-                <h3>Scenesnakk</h3>
+            <div class="topnav">
+                <a href="index.html">Hjem</a>
+                <a href="serie.html">Serier</a>
+                <a href="film.html">Filmer</a>
+                <p>Om</p>
+                <p class="signup">Logg inn</p>
+
             </div>
-            <nav>
-
-                <div class="topnav">
-                    <p>Home</p>
-                    <p>Series</p>
-                    <p>Films</p>
-                    <p>About</p>
-                    <p class="signup">Sign in</p>
-
-                </div>
-            </nav>
-        </header>
-
-
+        </nav>
     </header>
+
 
     <section>
 
@@ -86,7 +83,7 @@
                 <img src="bilder/Oppenheimer.jpg" alt="">
             </div>
             <div>
-              
+
             </div>
             <div></div>
         </div>
@@ -130,12 +127,12 @@
 
         grid.classList.toggle("liste");
 
-  if (grid.classList.contains("liste")) {
-    knapp.className = "fa-solid fa-grip";
-  } else {
-    knapp.className = "fa-solid fa-list";
-  }
-}
+        if (grid.classList.contains("liste")) {
+            knapp.className = "fa-solid fa-grip";
+        } else {
+            knapp.className = "fa-solid fa-list";
+        }
+    }
 
 
 </script>
