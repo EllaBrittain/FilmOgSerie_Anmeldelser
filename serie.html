@@ -1,11 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Serier</title>
+
+    <link rel="stylesheet" href="header.css">
+
+    <link rel="stylesheet" href="film_serie.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
+
 <body>
-    
-</body>
+
+    <header>
+
+        <div class="icon">
+            <i class="fa-regular fa-circle-play"></i>
+            <h3>Scenesnakk</h3>
+        </div>
+        <nav>
+
+            <div class="topnav">
+                <a href="index.html">Hjem</a>
+                <a href="serie.html">Serier</a>
+                <a href="film.html">Filmer</a>
+                <p>Om</p>
+                <p class="signup">Logg inn</p>
+
+            </div>
+        </nav>
+    </header>
+
+
+    <section>
+
+        <h1>Serier</h1>
+
+        <p>TV-serier har blitt en av de mest populære formene for underholdning, og gir seerne mulighet til å følge
+            karakterer og historier over lengre tid. I motsetning til filmer, som ofte forteller en avsluttet historie
+            på et par timer, utvikler serier handlingen gjennom flere episoder og sesonger. Dette gir rom for dypere
+            karakterutvikling, mer komplekse plott og større følelsesmessig engasjement. Enten det er drama, komedie,
+            krim eller fantasy, finnes det serier for enhver smak – fra spennende thrillere til lette
+            hverdagsfortellinger som samler familien foran skjermen.</p>
+
+
+        <div class="kontroller">
+            <i class="fa-solid fa-list" id="knapp" onclick="byttVisning()"></i>
+        </div>
+
+        <div class="grid" id="grid">
+            <div>
+                <a href="1serie_anmeldelse.html"><img src="bilder/Film anmeldelser_files/friends.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="2serie_anmeldelse.html"><img src="bilder/gilmore.png" alt=""></a>
+            </div>
+            <div>
+                <a href="3serie_anmeldelse.html"><img src="bilder/gossipgirl.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="4serie_anmeldelse.html"><img src="bilder/greys.png" alt=""></a>
+            </div>
+            <div>
+                <a href="5serie_anmeldelse.html"><img src="bilder/narcos.png" alt=""></a>
+            </div>
+            <div>
+                <a href="6serie_anmeldelse.html"><img src="bilder/prisonbreak.png" alt=""></a>
+            </div>
+            <div>
+                <a href="7serie_anmeldelse.html"><img src="bilder/TheOffice.png" alt=""></a>
+            </div>
+            <div>
+                <a href="8serie_anmeldelse.html"><img src="bilder/vampire.png" alt=""></a>
+            </div>
+            <div>
+                <a href="9serie_anmeldelse.html"><img src="bilder/breakingbad.png" alt=""></a>
+            </div>
+            <div>
+                <a href="10serie_anmeldelse.html"><img src="bilder/Bridgerton_Season_4_Main_Poster_2.webp" alt=""></a>
+            </div>
+            <div>
+                <a href="11serie_anmeldelse.html"><img src="bilder/onetreehill.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="12serie_anmeldelse.html"><img src="bilder/outerbanks.jpg" alt=""></a>
+            </div>
+        </div>
+
+
+    </section>
+
+    <footer>
+        <h2>Kontakt oss</h2>
+        <div class="bunn">
+            <div class="storboks">
+                <h3>Om nettsiden vår</h3>
+                <p>Nettsiden brukes som en plattform for anmeldelser av filmer og serier.
+                    Her kan brukere lese ærlige og grundige vurderinger av både nye utgivelser og eldre klassikere.
+                    Anmeldelsene gir informasjon om handling, skuespill,
+                    regi, stemning og målgruppe, slik at det blir enklere å
+                    finne noe som passer å se.</p>
+            </div>
+            <div class="litenboks">
+                <h3> Ta kontakt gjennon</h3>
+                <p>Mobil: 123 45 678 </p>
+                <p>E-mail: serieogfil@gmail.com </p>
+                <p>Some: @serieogfilm </p>
+                <p>Adresse: Thuneveien 3 Oslo </p>
+            </div>
+
+
+
+
+        </div>
+
+
+        </div>
+    </footer>
+
+    <body>
+
+        <script>
+
+            function byttVisning() {
+                const grid = document.getElementById("grid");
+                const knapp = document.getElementById("knapp");
+
+                grid.classList.toggle("liste");
+
+                if (grid.classList.contains("liste")) {
+                    knapp.className = "fa-solid fa-grip";
+                } else {
+                    knapp.className = "fa-solid fa-list";
+                }
+            }
+
+
+        </script>
+
 </html>
