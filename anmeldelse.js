@@ -1,4 +1,14 @@
 
+// Finn vår storage index (til localStorage)
+const fileName = window.location.pathname.split('/').pop();
+const match = fileName.match(/^(\d+)/);
+let storageIndex = 0
+if (match) {
+    storageIndex = parseInt(match[1], 10);
+    console.log("Yes, jeg fant en storageIndex:", storageIndex);
+}
+
+
 // ---- Faste stjerner ----
 
 document.querySelectorAll(".stjerner.fast").forEach((gruppe) => {
@@ -73,9 +83,9 @@ function publiser() {
     }
 
     const anmeldelse = { navn, tekst, rating }
-    const lagrede = JSON.parse(localStorage.getItem("anmeldelser" + index) || "[]")
+    const lagrede = JSON.parse(localStorage.getItem("anmeldelser" + storageIndex) || "[]")
     lagrede.push(anmeldelse)
-    localStorage.setItem("anmeldelser", JSON.stringify(lagrede))
+    localStorage.setItem("anmeldelser" + storageIndex, JSON.stringify(lagrede))
 
     visAnmeldelse(anmeldelse, lagrede.length - 1)
     oppdaterGjennomsnitt()
@@ -118,7 +128,7 @@ function lagStjerner(rating) {
 // ---- Slett anmeldelse ----
 
 function slettAnmeldelse(index) {
-    const lagrede = JSON.parse(localStorage.getItem("anmeldelser") || "[]")
+    const lagrede = JSON.parse(localStorage.getItem("anmeldelser" + storageIndex) || "[]")
     lagrede.splice(index, 1)
     localStorage.setItem("anmeldelser", JSON.stringify(lagrede))
 
@@ -128,10 +138,10 @@ function slettAnmeldelse(index) {
 }
 
 
-// ---- Gjennomsnitts vurdering ----
+// Gjennomsnitts vurdering ----
 
 function oppdaterGjennomsnitt() {
-    const lagrede = JSON.parse(localStorage.getItem("anmeldelser") || "[]")
+    const lagrede = JSON.parse(localStorage.getItem("anmeldelser" + storageIndex) || "[]")
 
     const fasteRatings = []
     document.querySelectorAll(".stjerner.fast").forEach(gruppe => {
@@ -177,5 +187,5 @@ function lesMer() {
 
 // Last inn lagrede anmeldelser //
 
-JSON.parse(localStorage.getItem("anmeldelser") || "[]").forEach((a, i) => visAnmeldelse(a, i))
+JSON.parse(localStorage.getItem("anmeldelser" + storageIndex) || "[]").forEach((a, i) => visAnmeldelse(a, i))
 oppdaterGjennomsnitt()
