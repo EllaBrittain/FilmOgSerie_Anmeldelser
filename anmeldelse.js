@@ -1,10 +1,10 @@
 
 // Finn vår storage index (til localStorage)
 const fileName = window.location.pathname.split('/').pop();
-const match = fileName.match(/^(\d+)/);
+const match = fileName.match(/^(\d+[a-zA-Z])/);
 let storageIndex = 0
 if (match) {
-    storageIndex = parseInt(match[1], 10);
+    storageIndex = match[1];
     console.log("Yes, jeg fant en storageIndex:", storageIndex);
 }
 
