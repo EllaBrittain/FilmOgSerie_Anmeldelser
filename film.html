@@ -4,57 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Filmer</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="film_serie.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-        body {
-            background-color: black;
-        }
-
-        section{
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 100px;
-            width: 890px;
-        }
-        
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(4, 200px);
-            grid-auto-rows: 250px;
-            gap: 30px;
-        }
-
-        .grid>div {
-            border: 1px solid white;
-            border-radius: 15px;
-        }
-        h2{
-            color: white;
-            font-size: 40px;
-        }
-        h1{
-            color: white;
-            font-size: 70px;
-            border-bottom: 1px solid white;
-        }
-        p{
-            color: white;
-            font-size: 25px;
-            text-align: center;
-            line-height: 20px;
-        }
-    </style>
 </head>
 
 <body>
@@ -62,54 +17,127 @@
 
     <header>
 
-        <nav>
+        <header>
 
-        </nav>
+            <div class="icon">
+                <i class="fa-regular fa-circle-play"></i>
+                <h3>Scenesnakk</h3>
+            </div>
+            <nav>
+
+                <div class="topnav">
+                    <p>Home</p>
+                    <p>Series</p>
+                    <p>Films</p>
+                    <p>About</p>
+                    <p class="signup">Sign in</p>
+
+                </div>
+            </nav>
+        </header>
+
 
     </header>
 
     <section>
 
-        <h1>Filmer og Serier</h1>
+        <h1>Filmer</h1>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, deserunt illum. Iste aut similique fuga dolorum sapiente quidem nobis quasi quam! Quidem sequi inventore accusantium quos? Eligendi tenetur inventore quisquam.</p>
+        <p>Filmer er en kraftfull kunstform som kombinerer bilde, lyd og fortelling for å skape sterke opplevelser på
+            kortere tid. En god film kan røre, engasjere og inspirere i løpet av bare noen timer. Filmmediet rommer et
+            bredt spekter av sjangre, fra action og romantikk til dokumentar og animasjon. Med imponerende visuelle
+            effekter, dyktige skuespillere og gjennomarbeidede manus kan filmer transportere oss til helt nye verdener
+            eller gi oss nye perspektiver på vår egen. Enten man ser film på kino eller hjemme, er det en opplevelse som
+            kan deles og diskuteres i etterkant.</p>
 
-        <h2>Filmer:</h2>
-
-        <div class="grid">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+        <div class="kontroller">
+            <i class="fa-solid fa-list" id="knapp" onclick="byttVisning()"></i>
         </div>
 
-        <h2>Serier:</h2>
-
-         <div class="grid">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+        <div class="grid" id="grid">
+            <div>
+                <a href="1film_anmeldelse.html"><img src="bilder/1film.png" alt=""></a>
+            </div>
+            <div>
+                <a href=""><img src="bilder/batman.jpg" alt=""></a>
+            </div>
+            <div>
+                <img src="bilder/blonde.jpg" alt="">
+            </div>
+            <div>
+                <img src="bilder/gatsby.jpg" alt="">
+            </div>
+            <div>
+                <img src="bilder/hungergames.jpg" alt="">
+            </div>
+            <div>
+                <img src="bilder/itonya.jpg" alt="">
+            </div>
+            <div>
+                <img src="bilder/joker.jpg" alt="">
+            </div>
+            <div>
+                <img src="bilder/narcos.png" alt="">
+            </div>
+            <div>
+                <img src="bilder/matrix.jpg" alt="">
+            </div>
+            <div>
+                <img src="bilder/Oppenheimer.jpg" alt="">
+            </div>
+            <div>
+              
+            </div>
             <div></div>
         </div>
-
 
     </section>
+
+    <footer>
+        <h2>Kontakt oss</h2>
+        <div class="bunn">
+            <div class="storboks">
+                <h3>Om nettsiden vår</h3>
+                <p>Nettsiden brukes som en plattform for anmeldelser av filmer og serier.
+                    Her kan brukere lese ærlige og grundige vurderinger av både nye utgivelser og eldre klassikere.
+                    Anmeldelsene gir informasjon om handling, skuespill,
+                    regi, stemning og målgruppe, slik at det blir enklere å
+                    finne noe som passer å se.</p>
+            </div>
+            <div class="litenboks">
+                <h3> Ta kontakt gjennon</h3>
+                <p>Mobil: 123 45 678 </p>
+                <p>E-mail: serieogfil@gmail.com </p>
+                <p>Some: @serieogfilm </p>
+                <p>Adresse: Thuneveien 3 Oslo </p>
+            </div>
+
+
+
+
+        </div>
+
+
+        </div>
+    </footer>
 </body>
+
+<script>
+
+    function byttVisning() {
+        const grid = document.getElementById("grid");
+        const knapp = document.getElementById("knapp");
+
+        grid.classList.toggle("liste");
+
+  if (grid.classList.contains("liste")) {
+    knapp.className = "fa-solid fa-grip";
+  } else {
+    knapp.className = "fa-solid fa-list";
+  }
+}
+
+
+</script>
 
 </html>
