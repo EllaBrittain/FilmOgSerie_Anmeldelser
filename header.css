@@ -44,6 +44,24 @@ header {
   border-bottom: 1px solid black;
 }
 
+nav p {
+  transition: 0.2s;
+}
+nav p:hover {
+  transform: scale(1.1);
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  transition: 0.2s;
+}
+
+a:hover {
+  transform: scale(1.1);
+}
+
 .signup {
   background-color: rgb(194, 123, 123);
   border-radius: 25px;
