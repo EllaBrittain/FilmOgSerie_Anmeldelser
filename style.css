@@ -38,19 +38,6 @@ i {
   font-size: 40px;
 }
 
-header {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgb(61, 59, 59);
-  padding-right: 30px;
-  border-bottom: 1px solid black;
-}
-
 .signup {
   background-color: rgb(194, 123, 123);
   border-radius: 25px;
