@@ -74,7 +74,7 @@
                 <a href="7film_anmeldelse.html"><img src="bilder/joker.jpg" alt=""></a>
             </div>
             <div>
-                <a href="8film_anmeldelse.html"></a>
+                <a href="8film_anmeldelse.html"><img src="bilder/titanic.jpg" alt=""></a>
             </div>
             <div>
                 <a href="9film_anmeldelse.html"><img src="bilder/matrix.jpg" alt=""></a>
@@ -83,9 +83,11 @@
                 <a href="10film_anmeldelse.html"><img src="bilder/Oppenheimer.jpg" alt=""></a>
             </div>
             <div>
-
+                <a href="11film_anmeldelse.html"><img src="bilder/inception.jpg" alt=""></a>
             </div>
-            <div></div>
+            <div>
+                <a href="12film_anmeldelse.html"><img src="bilder/spiderman.jpg" alt=""></a>
+            </div>
         </div>
 
     </section>
@@ -119,22 +121,23 @@
     </footer>
 
 
-<script>
+    <script>
 
-    function byttVisning() {
-        const grid = document.getElementById("grid");
-        const knapp = document.getElementById("knapp");
+        function byttVisning() {
+            const grid = document.getElementById("grid");
+            const knapp = document.getElementById("knapp");
 
-        grid.classList.toggle("liste");
+            grid.classList.toggle("liste");
 
-        if (grid.classList.contains("liste")) {
-            knapp.className = "fa-solid fa-grip";
-        } else {
-            knapp.className = "fa-solid fa-list";
+            if (grid.classList.contains("liste")) {
+                knapp.className = "fa-solid fa-grip";
+            } else {
+                knapp.className = "fa-solid fa-list";
+            }
         }
-    }
 
 
-</script>
+    </script>
 </body>
+
 </html>
