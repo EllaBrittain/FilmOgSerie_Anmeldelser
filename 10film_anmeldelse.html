@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmanmeldelse 1</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+    <link rel="stylesheet" href="anmeldelse.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+
+<body>
+    <header>
+        <div class="icon">
+            <i class="fa-regular fa-circle-play"></i>
+            <h3>Scenesnakk</h3>
+        </div>
+        <nav>
+
+            <div class="topnav">
+                <p>Home</p>
+                <p>Series</p>
+                <p>Films</p>
+                <p>About</p>
+                <p class="signup">Sign in</p>
+
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="flex">
+            <section class="filmForside">
+                <img src="bilder/Oppenheimer.jpg" alt="filmForside">
+            </section>
+
+            <section class="tekst">
+                <div class="overskrift">
+                    <h2>Oppenheimer</h2>
+                    <div class="gjennomsnitt-vurdering">
+                    </div>
+                </div>
+                <div class="info">
+                    <p><b>Om filmen:</b>Oppenheimer er et historisk drama fra 2023 regissert av Christopher Nolan. Filmen følger livet til J. Robert Oppenheimer, vitenskapsmannen som ledet utviklingen av atombomben under Manhattan Project. Hovedrollen spilles av Cillian Murphy.
+Filmen utforsker både Oppenheimers vitenskapelige prestasjoner og de etiske og personlige konsekvensene av å skape et så destruktivt våpen. Den er kjent for sin intense fortellerstil, sterke skuespill og realistiske gjenskaping av historiske hendelser, samtidig som den tar opp moralske dilemmaer og menneskelig kompleksitet.</p>
+                </div>
+                <div class="anmeldeser-boks">
+                    <div class="overskrift">
+                        <h2>Anmeldelser:</h2>
+                        <div class="seMer">
+                            <p id="les">Se mer</p>
+                            <i id="seAlle" onclick="lesMer()" class="fa-solid fa-caret-left"></i>
+                        </div>
+                    </div>
+                    <div class="andmeldese">
+                        <div class="top">
+                            <p><b>Navn:</b> Sofia Berg </p>
+                            <nav class="stjerner fast" data-rating="5">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </nav>
+                        </div>
+                        <p>Oppenheimer er en dypt imponerende og dramatisk film som kombinerer historie, spenning og etiske dilemmaer på en mesterlig måte. Cillian Murphy leverer en fantastisk prestasjon som J. Robert Oppenheimer, og filmen holder deg fanget fra start til slutt.</p>
+                    </div>
+
+                    <div class="andmeldese">
+                        <div class="top">
+                            <p><b>Navn:</b> Jacob Eriksen </p>
+                            <nav class="stjerner fast" data-rating="5">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </nav>
+                        </div>
+                        <p>Filmen Oppenheimer er både episk og tankevekkende, med en historie som viser hvor komplisert menneskelig ansvar kan være. Historien om J. Robert Oppenheimer og utviklingen av atombomben er både fascinerende og urovekkende, og skuespillet til Cillian Murphy gjør filmen enda sterkere.
+                        </p>
+                    </div>
+                    <button class="skriv" onclick="skrivAnmeldelse()">Skriv en anmeldelse</button>
+
+                </div>
+            </section>
+        </div>
+
+
+        <section class="slide">
+            <a href="9film_anmeldelse.html">
+                <button class="venstre">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+            </a>
+            <h3>Klikk for å komme til neste film!</h3>
+            <a href="2serie_anmeldelse.html">
+                <button class="hoyre">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+            </a>
+        </section>
+
+
+        <!-- ---- Modal ---- -->
+        <div id="modal">
+            <div class="modal-innhold">
+                <h2>Skriv anmeldelse</h2>
+                <input id="navnInput" type="text" placeholder="Ditt navn">
+                <nav class="stjerner" id="modalStjerner">
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </nav>
+                <textarea id="tekstInput" placeholder="Skriv anmeldelsen din her..."></textarea>
+                <div class="knapper">
+                    <button class="skriv" onclick="publiser()">Publiser</button>
+                    <button class="skriv" onclick="lukkModal()">Avbryt</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+
+    <script src="anmeldelse.js"></script>
+
+</body>
+
+</html>
