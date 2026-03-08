@@ -27,6 +27,13 @@ body {
     flex-direction: column;
 }
 
+.signup {
+    margin-bottom: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
 main {
     width: 90vw;
     margin: auto;
@@ -195,7 +202,7 @@ main .flex {
 
 
 
-a>button {
+.slide button {
     background-color: rgb(194, 123, 123);
     border-radius: 10px;
     padding: 5px;

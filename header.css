@@ -42,6 +42,7 @@ header {
   background-color: rgb(61, 59, 59);
   padding-right: 30px;
   border-bottom: 1px solid black;
+  z-index: 3;
 }
 
 nav p {
