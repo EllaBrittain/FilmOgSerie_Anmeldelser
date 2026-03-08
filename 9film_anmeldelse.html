@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmanmeldelse 1</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+    <link rel="stylesheet" href="anmeldelse.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+
+<body>
+    <header>
+        <div class="icon">
+            <i class="fa-regular fa-circle-play"></i>
+            <h3>Scenesnakk</h3>
+        </div>
+        <nav>
+
+            <div class="topnav">
+                <p>Home</p>
+                <p>Series</p>
+                <p>Films</p>
+                <p>About</p>
+                <p class="signup">Sign in</p>
+
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="flex">
+            <section class="filmForside">
+                <img src="bilder/matrix.jpg" alt="filmForside">
+            </section>
+
+            <section class="tekst">
+                <div class="overskrift">
+                    <h2>Matrix</h2>
+                    <div class="gjennomsnitt-vurdering">
+                    </div>
+                </div>
+                <div class="info">
+                    <p><b>Om filmen:</b>The Matrix er en science fiction-actionfilm regissert av Lana Wachowski og Lilly Wachowski. Hovedrollen spilles av Keanu Reeves som Neo, en hacker som oppdager at verden han lever i egentlig er en simulasjon laget av maskiner for å kontrollere menneskeheten.
+Filmen kombinerer filosofi, action og banebrytende spesialeffekter, inkludert den ikoniske "bullet time"-teknikken. Den følger Neo mens han slutter seg til opprørere som Morpheus og Trinity for å kjempe mot maskinene og forstå sin rolle som "The One". The Matrix er kjent for sin innovative stil, dype tematikk og enorme kulturelle påvirkning innen sci-fi og actionfilm.</p>
+                </div>
+                <div class="anmeldeser-boks">
+                    <div class="overskrift">
+                        <h2>Anmeldelser:</h2>
+                        <div class="seMer">
+                            <p id="les">Se mer</p>
+                            <i id="seAlle" onclick="lesMer()" class="fa-solid fa-caret-left"></i>
+                        </div>
+                    </div>
+                    <div class="andmeldese">
+                        <div class="top">
+                            <p><b>Navn:</b> Maria Pedersen </p>
+                            <nav class="stjerner fast" data-rating="5">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </nav>
+                        </div>
+                        <p>The Matrix er en revolusjonerende og spennende film som kombinerer action, filosofi og fantastiske effekter. Keanu Reeves er perfekt som Neo, og filmen føles både episk og tankevekkende.</p>
+                    </div>
+
+                    <div class="andmeldese">
+                        <div class="top">
+                            <p><b>Navn:</b> Peder Hansen </p>
+                            <nav class="stjerner fast" data-rating="4">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </nav>
+                        </div>
+                        <p>The Matrix er en klassiker som imponerer med sin stil, spennende historie og banebrytende spesialeffekter. Historien om Neo og kampen mot maskinene er både engasjerende og visuelt fantastisk.
+                        </p>
+                    </div>
+                    <button class="skriv" onclick="skrivAnmeldelse()">Skriv en anmeldelse</button>
+
+                </div>
+            </section>
+        </div>
+
+
+        <section class="slide">
+            <a href="8film_anmeldelse.html">
+                <button class="venstre">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+            </a>
+            <h3>Klikk for å komme til neste film!</h3>
+            <a href="10film_anmeldelse.html">
+                <button class="hoyre">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+            </a>
+        </section>
+
+
+        <!-- ---- Modal ---- -->
+        <div id="modal">
+            <div class="modal-innhold">
+                <h2>Skriv anmeldelse</h2>
+                <input id="navnInput" type="text" placeholder="Ditt navn">
+                <nav class="stjerner" id="modalStjerner">
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </nav>
+                <textarea id="tekstInput" placeholder="Skriv anmeldelsen din her..."></textarea>
+                <div class="knapper">
+                    <button class="skriv" onclick="publiser()">Publiser</button>
+                    <button class="skriv" onclick="lukkModal()">Avbryt</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+
+    <script src="anmeldelse.js"></script>
+
+</body>
+
+</html>
