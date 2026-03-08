@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmanmeldelse 1</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+    <link rel="stylesheet" href="anmeldelse.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+
+<body>
+    <header>
+        <div class="icon">
+            <i class="fa-regular fa-circle-play"></i>
+            <h3>Scenesnakk</h3>
+        </div>
+        <nav>
+
+            <div class="topnav">
+                <p>Home</p>
+                <p>Series</p>
+                <p>Films</p>
+                <p>About</p>
+                <p class="signup">Sign in</p>
+
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="flex">
+            <section class="filmForside">
+                <img src="bilder/Film anmeldelser_files/friends.jpg" alt="filmForside">
+            </section>
+
+            <section class="tekst">
+                <div class="overskrift">
+                    <h2>Narcos</h2>
+                    <div class="gjennomsnitt-vurdering">
+                    </div>
+                </div>
+                <div class="info">
+                    <p><b>Om filmen:</b> Friends er en klassisk sitcom fra 1994 som følger seks venner som bor i New
+                        York. Serien handler om vennskap, kjærlighet og hverdagsliv. Med ikoniske karakterer og mange
+                        kjente sitater har serien blitt en av de mest populære komedieseriene gjennom tidene. Den
+                        kombinerer humor, romantikk og livets små og store utfordringer, og viser hvordan venner støtter
+                        hverandre gjennom både gode og vanskelige tider.</p>
+                </div>
+                <div class="anmeldeser-boks">
+                    <div class="overskrift">
+                        <h2>Anmeldelser:</h2>
+                        <div class="seMer">
+                            <p id="les">Se mer</p>
+                            <i id="seAlle" onclick="lesMer()" class="fa-solid fa-caret-left"></i>
+                        </div>
+                    </div>
+                    <div class="andmeldese">
+                        <div class="top">
+                            <p><b>Navn:</b> Johanne Andersen </p>
+                            <nav class="stjerner fast" data-rating="3">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </nav>
+                        </div>
+                        <p>Friends er morsom med mange klassiske øyeblikk. Karakterene er enkle å like og serien er
+                            koselig å se på.</p>
+                    </div>
+
+                    <div class="andmeldese">
+                        <div class="top">
+                            <p><b>Navn:</b> Henrik Jensen </p>
+                            <nav class="stjerner fast" data-rating="4">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </nav>
+                        </div>
+                        <p>En klassisk sitcom som fortsatt er veldig gøy å se. Perfekt når man vil slappe av og le litt.
+                        </p>
+                    </div>
+                    <button class="skriv" onclick="skrivAnmeldelse()">Skriv en anmeldelse</button>
+
+                </div>
+            </section>
+        </div>
+
+
+        <section class="slide">
+            <a href="12serie_anmeldelse.html">
+                <button class="venstre">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+            </a>
+            <h3>Klikk for å komme til neste film!</h3>
+            <a href="9film_anmeldelse.html">
+                <button class="hoyre">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+            </a>
+        </section>
+
+
+        <!-- ---- Modal ---- -->
+        <div id="modal">
+            <div class="modal-innhold">
+                <h2>Skriv anmeldelse</h2>
+                <input id="navnInput" type="text" placeholder="Ditt navn">
+                <nav class="stjerner" id="modalStjerner">
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </nav>
+                <textarea id="tekstInput" placeholder="Skriv anmeldelsen din her..."></textarea>
+                <div class="knapper">
+                    <button class="skriv" onclick="publiser()">Publiser</button>
+                    <button class="skriv" onclick="lukkModal()">Avbryt</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+
+    <script src="anmeldelse.js"></script>
+
+</body>
+
+</html>
