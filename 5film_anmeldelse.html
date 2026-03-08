@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmanmeldelse 1</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+    <link rel="stylesheet" href="anmeldelse.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+
+<body>
+    <header>
+        <div class="icon">
+            <i class="fa-regular fa-circle-play"></i>
+            <h3>Scenesnakk</h3>
+        </div>
+        <nav>
+
+            <div class="topnav">
+                <p>Home</p>
+                <p>Series</p>
+                <p>Films</p>
+                <p>About</p>
+                <p class="signup">Sign in</p>
+
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="flex">
+            <section class="filmForside">
+                <img src="bilder/hungergames.jpg" alt="filmForside">
+            </section>
+
+            <section class="tekst">
+                <div class="overskrift">
+                    <h2>The Hunger Games</h2>
+                    <div class="gjennomsnitt-vurdering">
+                    </div>
+                </div>
+                <div class="info">
+                    <p><b>Om filmen:</b> The Hunger Games er en science fiction- og eventyrfilm fra 2012 regissert av Gary Ross. Filmen er basert på romanen The Hunger Games skrevet av Suzanne Collins. Hovedrollen spilles av Jennifer Lawrence, som spiller Katniss Everdeen.
+Historien foregår i den framtidige staten Panem, der myndighetene hvert år arrangerer en brutal konkurranse kalt The Hunger Games. To ungdommer fra hvert distrikt blir valgt til å kjempe mot hverandre i en arena til bare én står igjen. Katniss melder seg frivillig for å ta plassen til lillesøsteren sin og må kjempe for å overleve sammen med blant andre Peeta Mellark. Filmen handler om overlevelse, mot og motstand mot urettferdig makt.</p>
+                </div>
+                <div class="anmeldeser-boks">
+                    <div class="overskrift">
+                        <h2>Anmeldelser:</h2>
+                        <div class="seMer">
+                            <p id="les">Se mer</p>
+                            <i id="seAlle" onclick="lesMer()" class="fa-solid fa-caret-left"></i>
+                        </div>
+                    </div>
+                    <div class="andmeldese">
+                        <div class="top">
+                            <p><b>Navn:</b> Maria Nilsen</p>
+                            <nav class="stjerner fast" data-rating="5">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </nav>
+                        </div>
+                        <p>The Hunger Games er en spennende og intens film som holder deg interessert hele veien. Jennifer Lawrence spiller Katniss Everdeen veldig bra og gjør historien både sterk og engasjerende.</p>
+                    </div>
+
+                    <div class="andmeldese">
+                        <div class="top">
+                            <p><b>Navn:</b> Henrik Hauge</p>
+                            <nav class="stjerner fast" data-rating="4">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </nav>
+                        </div>
+                        <p>Selv om The Hunger Games har en interessant historie, kan noen deler føles litt trege. Jeg synes fortsatt Katniss Everdeen er en spennende hovedperson, men filmen kunne vært litt kortere.
+                        </p>
+                    </div>
+                    <button class="skriv" onclick="skrivAnmeldelse()">Skriv en anmeldelse</button>
+
+                </div>
+            </section>
+        </div>
+
+
+        <section class="slide">
+            <a href="4film_anmeldelse.html">
+                <button class="venstre">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+            </a>
+            <h3>Klikk for å komme til neste film!</h3>
+            <a href="6film_anmeldelse.html">
+                <button class="hoyre">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+            </a>
+        </section>
+
+
+        <!-- ---- Modal ---- -->
+        <div id="modal">
+            <div class="modal-innhold">
+                <h2>Skriv anmeldelse</h2>
+                <input id="navnInput" type="text" placeholder="Ditt navn">
+                <nav class="stjerner" id="modalStjerner">
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </nav>
+                <textarea id="tekstInput" placeholder="Skriv anmeldelsen din her..."></textarea>
+                <div class="knapper">
+                    <button class="skriv" onclick="publiser()">Publiser</button>
+                    <button class="skriv" onclick="lukkModal()">Avbryt</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+
+    <script src="anmeldelse.js"></script>
+
+</body>
+
+</html>
