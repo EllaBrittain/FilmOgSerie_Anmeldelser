@@ -130,7 +130,7 @@ function lagStjerner(rating) {
 function slettAnmeldelse(index) {
     const lagrede = JSON.parse(localStorage.getItem("anmeldelser" + storageIndex) || "[]")
     lagrede.splice(index, 1)
-    localStorage.setItem("anmeldelser", JSON.stringify(lagrede))
+    localStorage.setItem("anmeldelser" + storageIndex, JSON.stringify(lagrede))
 
     document.querySelectorAll(".andmeldese[data-index]").forEach(el => el.remove())
     lagrede.forEach((a, i) => visAnmeldelse(a, i))
