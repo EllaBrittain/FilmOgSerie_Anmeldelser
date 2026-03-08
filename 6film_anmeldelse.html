@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmanmeldelse 1</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+    <link rel="stylesheet" href="anmeldelse.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+
+<body>
+    <header>
+        <div class="icon">
+            <i class="fa-regular fa-circle-play"></i>
+            <h3>Scenesnakk</h3>
+        </div>
+        <nav>
+
+            <div class="topnav">
+                <p>Home</p>
+                <p>Series</p>
+                <p>Films</p>
+                <p>About</p>
+                <p class="signup">Sign in</p>
+
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="flex">
+            <section class="filmForside">
+                <img src="bilder/itonya.jpg" alt="filmForside">
+            </section>
+
+            <section class="tekst">
+                <div class="overskrift">
+                    <h2>I, Tonya</h2>
+                    <div class="gjennomsnitt-vurdering">
+                    </div>
+                </div>
+                <div class="info">
+                    <p><b>Om filmen:</b>I, Tonya er en biografisk dramakomedie fra 2017 regissert av Craig Gillespie. Filmen handler om livet til kunstløperen Tonya Harding, og hovedrollen spilles av Margot Robbie.
+Historien følger Tonya Hardings oppvekst, karriere og de mange utfordringene hun møter både i sporten og privatlivet. Filmen viser også den berømte skandalen før 1994 U.S. Figure Skating Championships, der konkurrenten Nancy Kerrigan ble angrepet. I, Tonya er kjent for sin humor, raske fortellerstil og sterke skuespill, og gir et annerledes blikk på en av de mest kjente skandalene i idrettshistorien.</p>
+                </div>
+                <div class="anmeldeser-boks">
+                    <div class="overskrift">
+                        <h2>Anmeldelser:</h2>
+                        <div class="seMer">
+                            <p id="les">Se mer</p>
+                            <i id="seAlle" onclick="lesMer()" class="fa-solid fa-caret-left"></i>
+                        </div>
+                    </div>
+                    <div class="andmeldese">
+                        <div class="top">
+                            <p><b>Navn:</b> Per Larsen </p>
+                            <nav class="stjerner fast" data-rating="3">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </nav>
+                        </div>
+                        <p>Filmen I, Tonya er interessant, men noen ganger føles historien litt fragmentert og ujevn. Selv om Margot Robbie spiller Tonya Harding sterkt, kunne filmen vært mer fokusert på de mest dramatiske hendelsene.</p>
+                    </div>
+
+                    <div class="andmeldese">
+                        <div class="top">
+                            <p><b>Navn:</b> Frida Karlsen </p>
+                            <nav class="stjerner fast" data-rating="4">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </nav>
+                        </div>
+                        <p>I, Tonya er en mørk, morsom og fengslende film som virkelig fanger både talentet og kaoset i Tonya Harding’s liv. Margot Robbie gjør en fantastisk jobb, og filmen er både underholdende og tankevekkende.
+                        </p>
+                    </div>
+                    <button class="skriv" onclick="skrivAnmeldelse()">Skriv en anmeldelse</button>
+
+                </div>
+            </section>
+        </div>
+
+
+        <section class="slide">
+            <a href="5film_anmeldelse.html">
+                <button class="venstre">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+            </a>
+            <h3>Klikk for å komme til neste film!</h3>
+            <a href="7film_anmeldelse.html">
+                <button class="hoyre">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+            </a>
+        </section>
+
+
+        <!-- ---- Modal ---- -->
+        <div id="modal">
+            <div class="modal-innhold">
+                <h2>Skriv anmeldelse</h2>
+                <input id="navnInput" type="text" placeholder="Ditt navn">
+                <nav class="stjerner" id="modalStjerner">
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </nav>
+                <textarea id="tekstInput" placeholder="Skriv anmeldelsen din her..."></textarea>
+                <div class="knapper">
+                    <button class="skriv" onclick="publiser()">Publiser</button>
+                    <button class="skriv" onclick="lukkModal()">Avbryt</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+
+    <script src="anmeldelse.js"></script>
+
+</body>
+
+</html>
