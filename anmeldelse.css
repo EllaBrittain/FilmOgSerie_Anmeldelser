@@ -307,3 +307,49 @@ main .flex {
 .slett:hover {
     color: white;
 }
+
+
+
+
+footer {
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid black;
+  color: white;
+  padding-top: 20px;
+}
+
+.bunn {
+  min-height: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.litenboks {
+  max-width: 300px;
+}
+
+.storboks {
+  max-width: 650px;
+}
+
+footer H2 {
+  color: rgb(170, 168, 168);
+  text-align: center;
+  padding-left: 0px;
+  font-size: 50px;
+}
+
+.bunn h3 {
+  color: rgb(194, 123, 123);
+}
+
+.bunn p {
+  font-size: 20px;
+  padding: 5px;
+  color: rgb(196, 194, 194);
+}
