@@ -9,7 +9,7 @@ if (match) {
 }
 
 
-// ---- Faste stjerner ----
+// Faste stjerner
 
 document.querySelectorAll(".stjerner.fast").forEach((gruppe) => {
     const rating = gruppe.dataset.rating
@@ -22,7 +22,7 @@ document.querySelectorAll(".stjerner.fast").forEach((gruppe) => {
 })
 
 
-// ---- Modal stjerner ----
+// Modal stjerner
 
 const modalStjerner = document.getElementById("modalStjerner")
 let valgtIndex = -1
@@ -52,7 +52,7 @@ modalStjerner.addEventListener("mouseleave", () => {
 })
 
 
-// ---- Modal ----
+//  Modal 
 
 function skrivAnmeldelse() {
     document.getElementById("modal").style.display = "flex"
@@ -70,7 +70,7 @@ function lukkModal() {
 }
 
 
-// ---- Publiser anmeldelse ----
+// Publiser anmeldelse 
 
 function publiser() {
     const navn = document.getElementById("navnInput").value.trim()
@@ -93,7 +93,7 @@ function publiser() {
 }
 
 
-// ---- Vis anmeldelse på siden ----
+// Vis anmeldelse på siden 
 
 function visAnmeldelse(anmeldelse, index) {
     const boks = document.querySelector(".anmeldeser-boks")
@@ -125,7 +125,7 @@ function lagStjerner(rating) {
 }
 
 
-// ---- Slett anmeldelse ----
+// Slett anmeldelse
 
 function slettAnmeldelse(index) {
     const lagrede = JSON.parse(localStorage.getItem("anmeldelser" + storageIndex) || "[]")
@@ -138,7 +138,7 @@ function slettAnmeldelse(index) {
 }
 
 
-// Gjennomsnitts vurdering ----
+// Gjennomsnitts vurdering
 
 function oppdaterGjennomsnitt() {
     const lagrede = JSON.parse(localStorage.getItem("anmeldelser" + storageIndex) || "[]")
@@ -169,7 +169,9 @@ function oppdaterGjennomsnitt() {
 }
 
 
-// Les mer funksjon //
+
+// Les mer funksjon 
+
 const lesMerKnapp = document.getElementById("seAlle")
 const tekstElm = document.getElementById("les")
 
@@ -185,7 +187,8 @@ function lesMer() {
     }
 }
 
-// Last inn lagrede anmeldelser //
+
+// Last inn lagrede anmeldelser 
 
 JSON.parse(localStorage.getItem("anmeldelser" + storageIndex) || "[]").forEach((a, i) => visAnmeldelse(a, i))
 oppdaterGjennomsnitt()
